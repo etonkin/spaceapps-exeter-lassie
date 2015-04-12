@@ -43,6 +43,8 @@
             this.buttonLedOff = new System.Windows.Forms.Button();
             this.buttonRunAway = new System.Windows.Forms.Button();
             this.buttonPushImage = new System.Windows.Forms.Button();
+            this.labelRed = new System.Windows.Forms.Label();
+            this.labelBlue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonFlashLeds
@@ -190,11 +192,31 @@
             this.buttonPushImage.UseVisualStyleBackColor = true;
             this.buttonPushImage.Click += new System.EventHandler(this.buttonPushImage_Click);
             // 
+            // labelRed
+            // 
+            this.labelRed.AutoSize = true;
+            this.labelRed.Location = new System.Drawing.Point(140, 190);
+            this.labelRed.Name = "labelRed";
+            this.labelRed.Size = new System.Drawing.Size(93, 13);
+            this.labelRed.TabIndex = 15;
+            this.labelRed.Text = "RedRemoteSignal";
+            // 
+            // labelBlue
+            // 
+            this.labelBlue.AutoSize = true;
+            this.labelBlue.Location = new System.Drawing.Point(254, 190);
+            this.labelBlue.Name = "labelBlue";
+            this.labelBlue.Size = new System.Drawing.Size(94, 13);
+            this.labelBlue.TabIndex = 16;
+            this.labelBlue.Text = "BlueRemoteSignal";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 331);
+            this.Controls.Add(this.labelBlue);
+            this.Controls.Add(this.labelRed);
             this.Controls.Add(this.buttonPushImage);
             this.Controls.Add(this.buttonRunAway);
             this.Controls.Add(this.buttonLedOff);
@@ -234,6 +256,8 @@
         private System.Windows.Forms.Button buttonLedOff;
         private System.Windows.Forms.Button buttonRunAway;
         private System.Windows.Forms.Button buttonPushImage;
+        private System.Windows.Forms.Label labelRed;
+        private System.Windows.Forms.Label labelBlue;
     }
 }
 

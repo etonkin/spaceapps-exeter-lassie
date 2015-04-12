@@ -63,6 +63,8 @@ namespace EV3Windows
         private void brickbrickChanged(object sender, BrickChangedEventArgs e)
         {
             //outputTextBox.AppendText("Something happened");
+
+        
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -113,11 +115,23 @@ namespace EV3Windows
 
         private async void WaveSign()
         {
+            //await brick.DirectCommand.SetMotorPolarity(OutputPort.A, Polarity.Forward);
+            //await brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 50, 0, 50, 0, true);
+            //Thread.Sleep(1000);
+            //for (var i = 0; i < 5; i++)
+            //{
+            //    await brick.DirectCommand.SetMotorPolarity(OutputPort.A, Polarity.Opposite);
+            //    await brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 50, 0, 30, 0, true);
+            //    Thread.Sleep(1000);
+            //}
+            //await brick.DirectCommand.SetMotorPolarity(OutputPort.A, Polarity.Opposite);
+            //await brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 50, 0, 15, 0, false);
+            //Thread.Sleep(1000);
+
             try
             {
-                await brick.DirectCommand.SetMotorPolarity(OutputPort.A, Polarity.Opposite);
                 await brick.DirectCommand.TurnMotorAtSpeedForTimeAsync(OutputPort.A, 10, 200, true);
-                Thread.Sleep(300);
+                Thread.Sleep(350);
                 for (var i = 0; i < 5; i++)
                 {
                     await brick.DirectCommand.SetMotorPolarity(OutputPort.A, Polarity.Opposite);
@@ -126,7 +140,7 @@ namespace EV3Windows
                 }
                 await brick.DirectCommand.SetMotorPolarity(OutputPort.A, Polarity.Opposite);
                 await brick.DirectCommand.TurnMotorAtSpeedForTimeAsync(OutputPort.A, 10, 200, false);
-                Thread.Sleep(300); //Todo Remove sleep hacks from all over the place
+                Thread.Sleep(350); //Todo Remove sleep hacks from all over the place
             }
             catch (Exception ex)
             {
