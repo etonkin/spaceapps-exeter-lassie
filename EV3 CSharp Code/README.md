@@ -14,4 +14,8 @@ or just add the NuGet package and get cracking
 
 **PM> Install-Package Lego.Ev3**
 
+The connection has been forced to Bluetooth (obviously pair the brick before you try to connect), but you can use Wifi or USB. There are some examples/docs here
+
+[https://legoev3.codeplex.com/releases/view/114257](https://legoev3.codeplex.com/releases/view/114257)
+
 I would recommend you do not use this code as it's pretty shoddy, but might be useful as a getting started hint ;-)

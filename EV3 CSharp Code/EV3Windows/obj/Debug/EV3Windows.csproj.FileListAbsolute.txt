@@ -9,3 +9,14 @@ C:\Users\Russ\Desktop\Hackathon\EV3\EV3Windows\obj\Debug\EV3Windows.csproj.Gener
 C:\Users\Russ\Desktop\Hackathon\EV3\EV3Windows\obj\Debug\EV3Windows.exe
 C:\Users\Russ\Desktop\Hackathon\EV3\EV3Windows\obj\Debug\EV3Windows.pdb
 C:\Users\Russ\Desktop\Hackathon\EV3\EV3Windows\obj\Debug\EV3Windows.csprojResolveAssemblyReference.cache
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\bin\Debug\EV3Windows.exe.config
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\obj\Debug\EV3Windows.exe
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\obj\Debug\EV3Windows.pdb
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\bin\Debug\EV3Windows.exe
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\bin\Debug\EV3Windows.pdb
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\bin\Debug\Lego.Ev3.Desktop.dll
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\bin\Debug\Lego.Ev3.Desktop.xml
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\obj\Debug\EV3Windows.csprojResolveAssemblyReference.cache
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\obj\Debug\EV3Windows.MainForm.resources
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\obj\Debug\EV3Windows.Properties.Resources.resources
+C:\Users\Russ\Desktop\Hackathon\GitHub\spaceapps-exeter-lassie\EV3 CSharp Code\EV3Windows\obj\Debug\EV3Windows.csproj.GenerateResource.Cache
