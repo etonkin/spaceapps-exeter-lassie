@@ -45,6 +45,10 @@
             this.buttonPushImage = new System.Windows.Forms.Button();
             this.labelRed = new System.Windows.Forms.Label();
             this.labelBlue = new System.Windows.Forms.Label();
+            this.buttonPanic = new System.Windows.Forms.Button();
+            this.buttonPhew = new System.Windows.Forms.Button();
+            this.labelTrack = new System.Windows.Forms.Label();
+            this.buttonTrack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonFlashLeds
@@ -55,7 +59,7 @@
             this.buttonFlashLeds.TabIndex = 0;
             this.buttonFlashLeds.Text = "LED";
             this.buttonFlashLeds.UseVisualStyleBackColor = true;
-            this.buttonFlashLeds.Click += new System.EventHandler(this.button1_Click);
+            this.buttonFlashLeds.Click += new System.EventHandler(this.buttonFlashLed_Click);
             // 
             // comPortsComboBox
             // 
@@ -210,11 +214,55 @@
             this.labelBlue.TabIndex = 16;
             this.labelBlue.Text = "BlueRemoteSignal";
             // 
+            // buttonPanic
+            // 
+            this.buttonPanic.Location = new System.Drawing.Point(22, 331);
+            this.buttonPanic.Name = "buttonPanic";
+            this.buttonPanic.Size = new System.Drawing.Size(75, 23);
+            this.buttonPanic.TabIndex = 17;
+            this.buttonPanic.Text = "PANIC";
+            this.buttonPanic.UseVisualStyleBackColor = true;
+            this.buttonPanic.Click += new System.EventHandler(this.buttonPanic_Click);
+            // 
+            // buttonPhew
+            // 
+            this.buttonPhew.Location = new System.Drawing.Point(143, 331);
+            this.buttonPhew.Name = "buttonPhew";
+            this.buttonPhew.Size = new System.Drawing.Size(75, 23);
+            this.buttonPhew.TabIndex = 18;
+            this.buttonPhew.Text = "PHEW";
+            this.buttonPhew.UseVisualStyleBackColor = true;
+            this.buttonPhew.Click += new System.EventHandler(this.buttonPhew_Click);
+            // 
+            // labelTrack
+            // 
+            this.labelTrack.AutoSize = true;
+            this.labelTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrack.Location = new System.Drawing.Point(331, 331);
+            this.labelTrack.Name = "labelTrack";
+            this.labelTrack.Size = new System.Drawing.Size(64, 25);
+            this.labelTrack.TabIndex = 20;
+            this.labelTrack.Text = "label1";
+            // 
+            // buttonTrack
+            // 
+            this.buttonTrack.Location = new System.Drawing.Point(336, 359);
+            this.buttonTrack.Name = "buttonTrack";
+            this.buttonTrack.Size = new System.Drawing.Size(75, 23);
+            this.buttonTrack.TabIndex = 21;
+            this.buttonTrack.Text = "CLOSE IN";
+            this.buttonTrack.UseVisualStyleBackColor = true;
+            this.buttonTrack.Click += new System.EventHandler(this.buttonCloseIn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 331);
+            this.ClientSize = new System.Drawing.Size(577, 396);
+            this.Controls.Add(this.buttonTrack);
+            this.Controls.Add(this.labelTrack);
+            this.Controls.Add(this.buttonPhew);
+            this.Controls.Add(this.buttonPanic);
             this.Controls.Add(this.labelBlue);
             this.Controls.Add(this.labelRed);
             this.Controls.Add(this.buttonPushImage);
@@ -258,6 +306,10 @@
         private System.Windows.Forms.Button buttonPushImage;
         private System.Windows.Forms.Label labelRed;
         private System.Windows.Forms.Label labelBlue;
+        private System.Windows.Forms.Button buttonPanic;
+        private System.Windows.Forms.Button buttonPhew;
+        private System.Windows.Forms.Label labelTrack;
+        private System.Windows.Forms.Button buttonTrack;
     }
 }
 

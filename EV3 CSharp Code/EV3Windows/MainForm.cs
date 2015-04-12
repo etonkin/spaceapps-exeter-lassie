@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Lego.Ev3.Core;
 using Lego.Ev3.Desktop;
 
@@ -23,14 +25,17 @@ namespace EV3Windows
             string[] ports = SerialPort.GetPortNames();
             comPortsComboBox.Items.AddRange(ports);
             comPortsComboBox.SelectedIndex = comPortsComboBox.Items.Count - 1;
+
+            //brick.SystemCommand.CopyFileAsync("Panic.rsf","apps/Panic.rsf");
+            //brick.SystemCommand.CopyFileAsync("Phew.rsf", "apps/Phew.rsf");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonFlashLed_Click(object sender, EventArgs e)
         {
             FlashLeds();
         }
 
-        private async void FlashLeds()
+        private void FlashLeds()
         {
             brick.DirectCommand.SetLedPatternAsync(LedPattern.RedFlash);
         }
@@ -48,11 +53,12 @@ namespace EV3Windows
             _conType = new BluetoothCommunication(comPortsComboBox.SelectedItem.ToString());
 
             brick = new Brick(_conType, true);
-            brick.BrickChanged += brickbrickChanged;
+            brick.BrickChanged += brickChanged;
             try
             {
                 await brick.ConnectAsync();
                 outputTextBox.AppendText("Connected" + Environment.NewLine);
+                brick.Ports[InputPort.Four].SetMode(InfraredMode.Seek);
             }
             catch (Exception)
             {
@@ -60,11 +66,10 @@ namespace EV3Windows
             }
         }
 
-        private void brickbrickChanged(object sender, BrickChangedEventArgs e)
+        private void brickChanged(object sender, BrickChangedEventArgs e)
         {
             //outputTextBox.AppendText("Something happened");
-
-        
+            Track();
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)
@@ -212,6 +217,33 @@ namespace EV3Windows
         {
             await brick.DirectCommand.DrawImageAsync(Color.Foreground, 0, 0, "Astronaut");
             await brick.DirectCommand.UpdateUIAsync();
+        }
+
+        private async void buttonPanic_Click(object sender, EventArgs e)
+        {
+            await brick.DirectCommand.PlaySoundAsync(100, "prjs/LassieProject/Panic");
+        }
+
+        private async void buttonPhew_Click(object sender, EventArgs e)
+        {
+            await brick.DirectCommand.PlaySoundAsync(100, "prjs/Phew");
+        }
+
+        private void Track()
+        {
+            var d = brick.Ports[InputPort.Four].PercentValue;
+            var n = brick.Ports[InputPort.Four].Name;
+            labelTrack.Text = String.Format("IR Dir: Sensor {0} - {1}°", n, d);
+        }
+
+        private void buttonCloseIn_Click(object sender, EventArgs e)
+        {
+            CloseIn();
+        }
+
+        private void CloseIn()
+        {
+            throw new NotImplementedException();
         }
     }
 }

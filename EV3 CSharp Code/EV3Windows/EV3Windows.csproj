@@ -69,6 +69,12 @@
     </Compile>
     <None Include="docs\LEGO Mindstorms EV3 - Desktop.chm" />
     <None Include="packages.config" />
+    <None Include="Panic.rsf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Phew.rsf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
